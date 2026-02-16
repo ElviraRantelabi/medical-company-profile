@@ -1,0 +1,163 @@
+<?php $__env->startSection('content'); ?>
+
+<!-- ================= BACK BUTTON ================= -->
+<div class="container mt-4">
+    <a href="<?php echo e(url('/catalog')); ?>" class="back-arrow">
+        <i class="bi bi-arrow-left-circle-fill"></i> Back to Catalog  <!-- Ikon panah + teks -->
+    </a>
+</div>
+
+<!-- ================= PRODUCT DETAIL SECTION ================= -->
+<section class="product-detail-section">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- LEFT: PRODUCT IMAGE -->
+            <div class="col-lg-6">
+                <div class="product-image">
+                    <img src="<?php echo e(asset('assets/images/project/grid1.jpg')); ?>" alt="Portable ECG Monitoring System">
+                </div>
+            </div>
+
+            <!-- RIGHT: PRODUCT INFO -->
+            <div class="col-lg-6">
+                <div class="product-info">
+                    <h1>Portable ECG Monitoring System</h1>
+
+                    <p class="short-desc">
+                        Advanced multi-channel ECG monitoring device designed for accurate 
+                        cardiac assessment in hospitals and clinics.
+                    </p>
+
+                    <div class="product-badges">
+                        <span>CE Certified</span>
+                        <span>ISO Approved</span>
+                        <span>2 Years Warranty</span>
+                    </div>
+
+                    <div class="product-buttons">
+                        <a href="#" class="btn-primary-custom">Request Quotation</a>
+                        <a href="#" class="btn-outline-custom">Download Brochure</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= SPECIFICATION ================= -->
+<section class="product-specs">
+    <div class="container">
+        <h2 class="section-title">Detailed Specifications</h2>
+
+        <table class="spec-table">
+            <thead>
+                <tr>
+                    <th>Specification</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Display</td>
+                    <td>7-inch LCD</td>
+                </tr>
+                <tr>
+                    <td>Power Supply</td>
+                    <td>AC 220V / Rechargeable Battery</td>
+                </tr>
+                <tr>
+                    <td>Connectivity</td>
+                    <td>USB / Bluetooth</td>
+                </tr>
+                <tr>
+                    <td>Measurement Range</td>
+                    <td>30–250 bpm</td>
+                </tr>
+                <tr>
+                    <td>Accuracy</td>
+                    <td>±1 bpm</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+<section class="product-features">
+    <div class="container">
+        <h2 class="section-title">Product Features</h2>
+
+        <ul>
+            <li>Real-time monitoring system</li>
+            <li>Compact and portable design</li>
+            <li>High precision sensor technology</li>
+            <li>User-friendly interface</li>
+            <li>Suitable for ICU and emergency rooms</li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- ================= APPLICATION ================= -->
+<section class="product-application">
+    <div class="container">
+        <h2 class="section-title">Applications / Usage</h2>
+
+        <p class="mb-3">Recommended For:</p>
+
+        <ul class="application-list">
+            <li>Hospitals</li>
+            <li>Clinics</li>
+            <li>Emergency Units</li>
+            <li>Diagnostic Centers</li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- ================= CERTIFICATION ================= -->
+<section class="product-certification">
+    <div class="container">
+        <h2 class="section-title">Certification & Compliance</h2>
+
+        <div class="cert-badges">
+            <span>CE Certified</span>
+            <span>ISO 13485 Standard</span>
+            <span>FDA Approved</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= SAFETY ================= -->
+<section class="product-safety">
+    <div class="container">
+        <h2 class="section-title">Safety & Warranty Information</h2>
+
+        <p>
+            This product complies with international medical safety standards 
+            and includes a 24-month manufacturer warranty.
+        </p>
+    </div>
+</section>
+
+
+<!-- ================= CTA ================= -->
+<section class="product-cta">
+    <div class="container text-center">
+        <h2>Need More Information About This Product?</h2>
+
+        <div class="cta-buttons">
+            <a href="#" class="btn-white">Contact Sales</a>
+            <a href="#" class="btn-outline-white">Request Custom Quotation</a>
+        </div>
+    </div>
+</section>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH /Users/elvirarantelabi/medical-company-profile/resources/views/catalog-detail.blade.php ENDPATH**/ ?>
