@@ -7,7 +7,7 @@
 <!--==================================================-->
 <div class="container mt-4">
     <a href="{{ url('/catalog') }}" class="back-arrow">
-        <i class="bi bi-arrow-left-circle-fill"></i> Back to Catalog  <!-- Ikon panah + teks -->
+        <i class="bi bi-arrow-left-circle-fill"></i> Back to Catalog
     </a>
 </div>
 
@@ -22,18 +22,17 @@
             <!-- LEFT: PRODUCT IMAGE -->
             <div class="col-lg-6">
                 <div class="product-image">
-                    <img src="{{ asset('assets/images/project/grid1.jpg') }}" alt="Portable ECG Monitoring System">
+                    <img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
                 </div>
             </div>
 
             <!-- RIGHT: PRODUCT INFO -->
             <div class="col-lg-6">
                 <div class="product-info">
-                    <h1>Portable ECG Monitoring System</h1>
+                    <h1>{{ $product->name }}</h1>
 
                     <p class="short-desc">
-                        Advanced multi-channel ECG monitoring device designed for accurate 
-                        cardiac assessment in hospitals and clinics.
+                        {{ $product->description }}
                     </p>
 
                     <div class="product-badges">
@@ -70,28 +69,29 @@
             <tbody>
                 <tr>
                     <td>Display</td>
-                    <td>7-inch LCD</td>
+                    <td>{{ $product->display }}</td>
                 </tr>
                 <tr>
                     <td>Power Supply</td>
-                    <td>AC 220V / Rechargeable Battery</td>
+                    <td>{{ $product->power }}</td>
                 </tr>
                 <tr>
                     <td>Connectivity</td>
-                    <td>USB / Bluetooth</td>
+                    <td>{{ $product->connectivity }}</td>
                 </tr>
                 <tr>
                     <td>Measurement Range</td>
-                    <td>30–250 bpm</td>
+                    <td>{{ $product->measurement_range }}</td>
                 </tr>
                 <tr>
                     <td>Accuracy</td>
-                    <td>±1 bpm</td>
+                    <td>{{ $product->accuracy }}</td>
                 </tr>
             </tbody>
         </table>
     </div>
 </section>
+
 
 <!--==================================================-->
 <!-- FEATURES -->

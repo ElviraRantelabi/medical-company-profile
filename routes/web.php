@@ -12,15 +12,14 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/catalog', function () {
-    return view('catalog');
-});
+
+Route::get('/catalog', [ProductController::class, 'index'])
+    ->name('product.index');
+
+Route::get('/catalog/{id}', [ProductController::class, 'show'])
+    ->name('product.show');
+
 
 Route::get('/contact', function () {
     return view('contact');
-});
-
-
-Route::get('/catalog-detail', function () {
-    return view('catalog-detail');
 });

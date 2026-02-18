@@ -3,6 +3,7 @@
 @section('content')
 
 
+
 	<!-- Lifesafe Mobile Menu Area -->
 	<div class="mobile-menu-area sticky-menu" id="navbar">
 		<div class="mobile-menu">
@@ -67,133 +68,27 @@
 		</div>
 	</div>
 
-    <div class="row g-4">
-      
-	<div class="col-lg-4 col-md-6">
-		<div class="service-single-box wow fadeInUp">
-			<div class="service-thumb">
-				<img src="{{ asset('assets/images/service/service1.png') }}" alt="">
-				<div class="service-icon">
-					<img src="{{ asset('assets/images/service/service-icon1.png') }}" alt="">
+	<div class="row g-4">
+		@foreach($products as $product)
+		<div class="col-lg-4 col-md-6">
+			<div class="service-single-box wow fadeInUp">
+				<div class="service-thumb">
+					<img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
+				</div>
+
+				<div class="service-content">
+					<h4>{{ $product->name }}</h4>
+					<p>{{ $product->description }}</p>
+
+					<a href="{{ url('/catalog/'.$product->id) }}" class="service-read-more">
+						Read More →
+					</a>
 				</div>
 			</div>
-			<div class="service-content">
-				<h4>Family Insurance</h4>
-				<p>The trust then manages the policy and pays the premiums.</p>
-
-				<a href="/catalog-detail" class="service-read-more">
-					Read More →
-				</a>
-			</div>
 		</div>
+		@endforeach
 	</div>
-
-
-	<div class="col-lg-4 col-md-6">
-		<div class="service-single-box wow fadeInUp">
-			<div class="service-thumb">
-				<img src="{{ asset('assets/images/service/service1.png') }}" alt="">
-				<div class="service-icon">
-					<img src="{{ asset('assets/images/service/service-icon1.png') }}" alt="">
-				</div>
-			</div>
-			<div class="service-content">
-				<h4>Family Insurance</h4>
-				<p>The trust then manages the policy and pays the premiums.</p>
-
-
-				<a href="#" class="service-read-more">
-					Read More →
-				</a>
-			</div>
-		</div>
-	</div>
-
-
-
-	<div class="col-lg-4 col-md-6">
-		<div class="service-single-box wow fadeInUp">
-			<div class="service-thumb">
-				<img src="{{ asset('assets/images/service/service1.png') }}" alt="">
-				<div class="service-icon">
-					<img src="{{ asset('assets/images/service/service-icon1.png') }}" alt="">
-				</div>
-			</div>
-			<div class="service-content">
-				<h4>Family Insurance</h4>
-				<p>The trust then manages the policy and pays the premiums.</p>
-
-
-				<a href="#" class="service-read-more">
-					Read More →
-				</a>
-			</div>
-		</div>
-	</div>
-
-
-	<div class="col-lg-4 col-md-6">
-		<div class="service-single-box wow fadeInUp">
-			<div class="service-thumb">
-				<img src="{{ asset('assets/images/service/service1.png') }}" alt="">
-				<div class="service-icon">
-					<img src="{{ asset('assets/images/service/service-icon1.png') }}" alt="">
-				</div>
-			</div>
-			<div class="service-content">
-				<h4>Family Insurance</h4>
-				<p>The trust then manages the policy and pays the premiums.</p>
-
-				<a href="#" class="service-read-more">
-					Read More →
-				</a>
-			</div>
-		</div>
-	</div>
-
-
-	<div class="col-lg-4 col-md-6">
-		<div class="service-single-box wow fadeInUp">
-			<div class="service-thumb">
-				<img src="{{ asset('assets/images/service/service1.png') }}" alt="">
-				<div class="service-icon">
-					<img src="{{ asset('assets/images/service/service-icon1.png') }}" alt="">
-				</div>
-			</div>
-			<div class="service-content">
-				<h4>Family Insurance</h4>
-				<p>The trust then manages the policy and pays the premiums.</p>
-
-
-				<a href="#" class="service-read-more">
-					Read More →
-				</a>
-			</div>
-		</div>
-	</div>
-
-
-	<div class="col-lg-4 col-md-6">
-		<div class="service-single-box wow fadeInUp">
-			<div class="service-thumb">
-				<img src="{{ asset('assets/images/service/service1.png') }}" alt="">
-				<div class="service-icon">
-					<img src="{{ asset('assets/images/service/service-icon1.png') }}" alt="">
-				</div>
-			</div>
-			<div class="service-content">
-				<h4>Family Insurance</h4>
-				<p>The trust then manages the policy and pays the premiums.</p>
-
-				<a href="#" class="service-read-more">
-					Read More →
-				</a>
-			</div>
-		</div>
-	</div>
-
-        </div>
-    </div>
+    </div> 
 </div>
 
 
